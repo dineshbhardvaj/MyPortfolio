@@ -1,6 +1,6 @@
 //configurations
 $primary-color: #444;
-$secondary-color: lightblue;
+$secondary-color: rgb(108, 203, 235);
 $show-home-image: true;
 $home-image: url(/dist/img/background.jpg);
 $potrait_image: url(/dist/img/portrait_small.jpg);
@@ -31,6 +31,16 @@ $background_opacity: 0.8;
         background: rgba($primary-color, $background_opacity);
       }
     }
+  }
+}
+
+//Set Text Color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
   }
 }
 
