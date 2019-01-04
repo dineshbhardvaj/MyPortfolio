@@ -1,12 +1,5 @@
-//configurations
-$primary-color: #444;
-$secondary-color: lightblue;
-
-//mixins
-
-@mixin easeOut {
-  transition: all 1.5s ease-out;
-}
+@import "config";
+@import "menu";
 
 // css starts here
 
@@ -19,6 +12,7 @@ $secondary-color: lightblue;
 }
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
